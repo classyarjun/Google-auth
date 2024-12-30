@@ -1,5 +1,7 @@
 import React from 'react'
 import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootswatch/dist/Cyborg/bootstrap.min.css';
 import { Route, Routes} from 'react-router-dom'
 import { Header } from './components/Header'
 import { Login } from './components/Login'

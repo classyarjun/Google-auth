@@ -22,44 +22,89 @@ export const Header = () => {
   }, []);
 
   return (
-    <div>
-      <header className="site-header" style={{ "background-color": "#51e2f5" }}>
-        <div className="site-identity">
-          <h1>
-            <a href="#">GoogleAuth</a>
-          </h1>
-        </div>
-        <nav className="site-navigation">
-          <ul className="nav">
-            {Object.keys(user)?.length > 0 ? (
-              <>
-                <div>
-                  <p>Welcome, {user.name}!</p>
-                  {/* <NavLink to="/profile">Profile</NavLink> */}
-                </div>
-              </>
-            ) : (
-              <>
-                <div>
-                  <NavLink to="/login">Login</NavLink>
-                </div>
-              </>
-            )}
+    <>
+      <div>
+        <nav className="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+          <div className="container-fluid  ">
 
-            {/* <li>
-              <NavLink to="/login">Login</NavLink>
-            </li> */}
+            <a className="navbar-brand" href="#">
+              Navbar
+            </a>
+            
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarColor02"
+              aria-controls="navbarColor02"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span className="navbar-toggler-icon"></span>
+            </button>
 
-            {/* <li>
-              <NavLink to="/login">Arjun Rajput</NavLink>
-            </li> */}
+            <div className="collapse navbar-collapse" id="navbarColor02">
+              <ul className="navbar-nav ms-auto">
+                <li className="nav-item">
+                  <a className="nav-link active" href="#">
+                    Home
+                    <span className="visually-hidden">(current)</span>
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="#">
+                    Features
+                  </a>
+                </li>
 
-            {/* <li>
-            <img src="https://cdn-icons-png.flaticon.com/512/1177/1177568.png" width={40} alt="" />
-            </li> */}
-          </ul>
+                <li className="nav-item dropdown">
+                  <a
+                    className="nav-link dropdown-toggle"
+                    data-bs-toggle="dropdown"
+                    href="#"
+                    role="button"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Dropdown
+                  </a>
+                  <div className="dropdown-menu">
+                    <a className="dropdown-item" href="#">
+                      Action
+                    </a>
+                    <a className="dropdown-item" href="#">
+                      Another action
+                    </a>
+                    <a className="dropdown-item" href="#">
+                      Something else here
+                    </a>
+                    <div className="dropdown-divider"></div>
+                    <a className="dropdown-item" href="#">
+                      Separated link
+                    </a>
+                  </div>
+                </li>
+
+
+                <li className="nav-item">
+                  <a className="nav-link" href="#">
+                    Pricing
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="#">
+                    About
+                  </a>
+                </li>
+
+                
+              </ul>
+
+              
+              
+            </div>
+          </div>
         </nav>
-      </header>
-    </div>
+      </div>
+    </>
   );
 };
